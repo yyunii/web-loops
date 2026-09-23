@@ -9,12 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" >
     <!-- Bootstrap Icon -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
         <div class="container">
             <!-- LOGO -->
             <a class="navbar-brand logo" href="#home">
@@ -74,18 +80,734 @@
     </nav>
 
     <!-- home -->
-    <div class="container-fluid py-5" id="#home">
-        <div class="container">
+    <div class="container-fluid py-5" id="home">
+        <div class="container mt-4">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="fw-bold ms-3 text-pink">✿ HANDMADE WITH LOVE</div>
                     <h1 class="text-pink">Made with Love,</h1>
                     <h1 class="text-pink">Looped by Hand.</h1>
+                    <p>temukan berbagai kerajinan handmade dari <span class="text-pink fw-bold">pipe cleaner</span> dan <span class="text-pink fw-bold">crochet</span> yang dibuat dengan penuh kreativitas dan kasih sayang.</p>
+                    <div class="hero-buttons">
+                        <a href="#shop" class="btn btn-loop">
+                            Shop Now
+                        </a>
+                        <a href="#custom" class="btn btn-outline-loop">
+                            Custom Order
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- kenapa pilih loops? -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <h2 class="fw-bold">
+                Kenapa Pilih LOOPS
+            </h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="d-flex mt-3 mx-auto">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                             <i class="bx bx-thread-roll py-1 px-1" style="font-size: 30px;"></i>
+                            </div>
+                        </div>
+                        <h5>100% handmade</h5>
+                        <p>
+                            Setiap produk dibuat
+                            dengan tangan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="d-flex mt-3 mx-auto">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                             <i class="bx bx-heart-circle py-1 px-1" style="font-size: 30px;"></i>
+                            </div>
+                        </div>
+                        <h5>Made with love</h5>
+                        <p>
+                            Dibuat dengan perhatian
+                            pada setiap detail.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="d-flex mt-3 mx-auto">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                             <i class="bx bx-palette py-1 px-1" style="font-size: 30px;"></i>
+                            </div>
+                        </div>
+                        <h5>Bisa custom</h5>
+                        <p>
+                            Pilih warna, bentuk,
+                            dan model sendiri.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="d-flex mt-3 mx-auto">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                             <i class="bx bx-box-alt py-1 px-1" style="font-size: 30px;"></i>
+                            </div>
+                        </div>
+                        <h5> Carefully Packed</h5>
+                        <p>
+                            Produk dikemas
+                            dengan aman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHOP -->
+    <div class="container-fluid py-5" id="shop">
+        <div class="container">
+            <div class="section-heading">
+                <span class="text-pink">✿</span>
+                <h2>
+                    Menu Loops
+                </h2>
+                <span class="text-pink">✿</span>
+            </div>
+            <p class="text-center text-muted">
+                Temukan produk handmade favoritmu ♡
+            </p>
+
+            <!-- FILTER -->
+            <div class="category-filter">
+                <button class="filter-btn active" onclick="filterProduct('crochet', this)">
+                    Crochet
+                </button>
+
+                <button class="filter-btn" onclick="filterProduct('pipe', this)">
+                    Pipe Cleaner
+                </button>
+            </div>
+
+            <!-- PRODUCT -->
+            <div class="row g-4 mt-3" id="productList">
+
+                <!-- PRODUCT 1 -->
+                <div class="col-6 col-md-4 col-lg-4 product-item" data-category="pipe">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/bucket 5 tangkai.jpeg" alt="Pipe Cleaner Bouquet 5 tangkai">
+                        </div>
+
+                        <div class="product-info">
+                            <h5>
+                                Pipe Cleaner Bouquet 5 tangkai
+                            </h5>
+                            <p class="price">
+                                Rp75.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.9
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Pipe Cleaner Bouquet 5 tangkai', 75000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2 -->
+                <div class="col-6 col-md-4 col-lg-3 product-item" data-category="crochet">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/boneka crochet.jpeg" alt="Boneka Crochet">
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Boneka Mini
+                            </h5>
+                            <p class="price">
+                                Rp20.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.8
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Boneka Mini', 20000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 3 -->
+                <div class="col-6 col-md-4 col-lg-3 product-item" data-category="crochet">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/bandana crochet.jpeg" alt="Bandana Crochet">
+
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Bandana
+                            </h5>
+                            <p class="price">
+                                Rp20.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.9
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Bandana', 20000)">
+
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4 -->
+                <div class="col-6 col-md-4 col-lg-3 product-item" data-category="crochet">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/topi crochet.jpeg" alt="Topi Crochet">
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Topi
+                            </h5>
+                            <p class="price">
+                                Rp50.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.9
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Topi Crochet', 50000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- PRODUCT 5 -->
+                <div class="col-6 col-md-4 col-lg-4 product-item" data-category="pipe">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/bucket mini 1 tangkai.png" alt="Mini Flower">
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Mini Flower
+                            </h5>
+                            <p class="price">
+                                Rp20.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.7
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Mini Flower', 20000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6 -->
+                <div class="col-6 col-md-4 col-lg-4 product-item" data-category="pipe">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/gantungan pipecleaner.jpeg" alt="Keychain pipe cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Keychain mini
+                            </h5>
+                            <p class="price">
+                                Rp7.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.7
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Keychain mini', 7000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7 -->
+                <div class="col-6 col-ms-4 col-lg-3 product-item" data-category="crochet">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/sarung tangan crochet.jpeg" alt="sarung tangan crochet">
+                        </div>
+                        <div class="product-info">
+                            <h5>
+                                Sarung tangan
+                            </h5>
+                            <p class="price">
+                                Rp35.000
+                            </p>
+                            <p class="rating">
+                                ⭐ 4.8
+                            </p>
+                            <button class="btn btn-cart" onclick="addToCart('Sarung tangan', 35000)">
+                                + Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- CUSTOM ORDER -->
+    <!-- ================================================= -->
+    <div class="container-fluid py-5" id="custom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="small-title">
+                        ✿ CUSTOM ORDER
+                    </span>
+                    <h2>
+                        Punya ide sendiri?
+                        <br>
+                        <span>Let's make it!</span>
+                    </h2>
+                    <p>
+                        Kami bisa membuat produk custom sesuai
+                        keinginanmu. Pilih warna, bentuk,
+                        ukuran, dan model yang kamu mau.
+                    </p>
+                    <button class="btn btn-loop" data-bs-toggle="modal" data-bs-target="#customModal">
+                        Request Custom →
+                    </button>
+                </div>
+
+                <div class="col-lg-5 text-center">
+                    <div class="custom-art">
+                        🧶 🌷 💗
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- KERANJANG -->
+    <!-- ================================================= -->
+
+    <!-- <section id="cart" class="cart-section section-padding"> -->
+    <div class="container-fluid py-5" id="cart">
+        <div class="container">
+            <div class="section-heading">
+                <span>✿</span>
+                <h2>
+                    Keranjang Belanja
+                </h2>
+                <span>✿</span>
+            </div>
+            <p class="text-center text-muted mb-5">
+                Cek kembali produk yang kamu pilih
+                sebelum melanjutkan.
+            </p>
+
+            <div class="row g-4">
+                <!-- DAFTAR PRODUK -->
+                <div class="col-lg-8">
+                    <div class="cart-box">
+                        <div class="cart-header">
+                            <h5>
+                                Produk
+                            </h5>
+                            <h5>
+                                Subtotal
+                            </h5>
+                        </div>
+                        <div id="cartItems">
+                            <div class="empty-cart">
+                                <i class="bi bi-bag"></i>
+                                <p>
+                                    Keranjang masih kosong.
+                                </p>
+                                <a href="#shop" class="btn btn-loop">
+                                    Belanja Sekarang
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOTAL -->
+                <div class="col-lg-4">
+                    <div class="cart-summary">
+                        <h4>
+                            Total Belanja
+                        </h4>
+                        <div class="summary-line">
+                            <span>
+                                Subtotal
+                            </span>
+                            <strong id="cartSubtotal">
+                                Rp0
+                            </strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>
+                                Ongkir
+                            </span>
+                            <strong id="cartShipping">
+                                Rp0
+                            </strong>
+                        </div>
+                        <hr>
+                        <div class="summary-total">
+                            <span>
+                                Total
+                            </span>
+                            <strong id="cartGrandTotal">
+                                Rp0
+                            </strong>
+                        </div>
+                        <button class="btn btn-loop w-100 mt-4" onclick="goToCheckout()">
+                            Checkout →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- CHECKOUT -->
+    <!-- ================================================= -->
+
+    <!-- <section id="checkout" class="checkout-section section-padding"> -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-heading">
+                <span>✿</span>
+                <h2>
+                    Checkout
+                </h2>
+                <span>✿</span>
+            </div>
+            <p class="text-center text-muted mb-5">
+                Lengkapi informasi pengiriman dan pembayaran.
+            </p>
+
+            <div class="row g-4">
+                <!-- ===================================== -->
+                <!-- INFORMASI + PEMBAYARAN -->
+                <!-- ===================================== -->
+                <div class="col-lg-7">
+                    <!-- INFORMASI PENGIRIMAN -->
+                    <div class="checkout-card">
+                        <div class="checkout-title">
+                            <span>
+                                01
+                            </span>
+                            <h4>
+                                Informasi Pengiriman
+                            </h4>
+                        </div>
+                        <div class="mb-3">
+                            <label>
+                                Nama Lengkap
+                            </label>
+                            <input type="text" id="customerName" class="form-control"
+                                placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="mb-3">
+                            <label>
+                                Alamat
+                            </label>
+                            <textarea id="customerAddress" class="form-control" rows="3"
+                                placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label>
+                                No. HP
+                            </label>
+                            <input type="text" id="customerPhone" class="form-control" placeholder="08xxxxxxxxxx">
+                        </div>
+                        <label>
+                            Metode Pengiriman
+                        </label>
+                        <div class="shipping-option">
+                            <label>
+                                <input type="radio" name="shipping" value="10000" checked onchange="updateCheckout()">
+                                JNE
+                            </label>
+                            <span>
+                                Rp10.000
+                            </span>
+                        </div>
+                        <div class="shipping-option">
+                            <label>
+                                <input type="radio" name="shipping" value="12000" onchange="updateCheckout()">
+                                J&T
+                            </label>
+                            <span>
+                                Rp12.000
+                            </span>
+                        </div>
+                        <div class="shipping-option">
+                            <label>
+                                <input type="radio" name="shipping" value="15000" onchange="updateCheckout()">
+                                SiCepat
+                            </label>
+                            <span>
+                                Rp15.000
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- METODE PEMBAYARAN -->
+                    <div class="checkout-card mt-4">
+                        <div class="checkout-title">
+                            <span>
+                                02
+                            </span>
+                            <h4>
+                                Metode Pembayaran
+                            </h4>
+                        </div>
+
+                        <!-- BANK -->
+                        <label class="payment-card">
+                            <input type="radio" name="payment" value="Transfer Bank" checked>
+                            <div>
+                                <strong>
+                                    Transfer Bank
+                                </strong>
+                                <small>
+                                    BCA • BRI • BNI • Mandiri
+                                </small>
+                            </div>
+                        </label>
+
+                        <!-- EWALLET -->
+                        <label class="payment-card">
+                            <input type="radio" name="payment" value="E-Wallet">
+                            <div>
+                                <strong>
+                                    E-Wallet
+                                </strong>
+                                <small>
+                                    DANA • OVO • GoPay
+                                </small>
+                            </div>
+                        </label>
+
+                        <!-- COD -->
+                        <label class="payment-card">
+                            <input type="radio" name="payment" value="COD">
+                            <div>
+                                <strong>
+                                    COD
+                                </strong>
+                                <small>
+                                    Bayar di tempat
+                                </small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- RINGKASAN PESANAN -->
+                <!-- ===================================== -->
+                <div class="col-lg-5">
+                    <div class="order-summary">
+                        <div class="checkout-title">
+                            <span>
+                                03
+                            </span>
+                            <h4>
+                                Ringkasan Pesanan
+                            </h4>
+                        </div>
+                        <div id="checkoutItems">
+                            <p class="text-muted">
+                                Belum ada produk.
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="summary-line">
+                            <span>
+                                Subtotal
+                            </span>
+                            <strong id="checkoutSubtotal">
+                                Rp0
+                            </strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>
+                                Ongkir
+                            </span>
+                            <strong id="checkoutShipping">
+                                Rp0
+                            </strong>
+                        </div>
+                        <hr>
+                        <div class="summary-total">
+                            <span>
+                                Total
+                            </span>
+                            <strong id="checkoutGrandTotal">
+                                Rp0
+                            </strong>
+                        </div>
+                        <button class="btn btn-loop w-100 mt-4" onclick="processPayment()">
+                            Bayar Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- MODAL CUSTOM ORDER -->
+    <!-- ================================================= -->
+    <div class="modal fade" id="customModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>
+                        🎨 Custom Order
+                    </h5>
+                    <button>
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-3" placeholder="Nama">
+                    <select name="gatau" id="gatau" disabled="disabled" class="form-select mb-3">
+                        <option>
+                            Pilih Jenis Produk
+                        </option>
+                        <option>
+                            Crochet
+                        </option>
+                        <option>
+                            Pipe Cleaner
+                        </option>
+                    </select>
+                    <input type="text" class="form-control mb-3" placeholder="Warna yang diinginkan">
+                    <textarea class="form-control mb-3" rows="4"
+                        placeholder="Deskripsikan produk yang kamu inginkan..."></textarea>
+                    <button class="btn btn-loop w-100">
+                        Kirim Request 💗
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <!-- <footer id="contact"> -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <!-- BRAND -->
+                <div class="col-lg-4">
+                    <h3>
+                        🌸 LOOPS
+                    </h3>
+                    <p>
+                        Handmade pieces,
+                        made with love. ♡
+                    </p>
+                    <div class="social-icons">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-whatsapp"></i>
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div class="col-6 col-lg-2">
+                    <h5>
+                        Quick Links
+                    </h5>
+                    <a href="#home">
+                        Home
+                    </a>
+                    <a href="#shop">
+                        Shop
+                    </a>
+                    <a href="#about">
+                        About Us
+                    </a>
+                    <a href="#custom">
+                        Custom Order
+                    </a>
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="col-6 col-lg-3">
+                    <h5>
+                        Categories
+                    </h5>
+                    <a href="#shop">
+                        Crochet
+                    </a>
+                    <a href="#shop">
+                        Pipe Cleaner
+                    </a>
+                    <a href="#shop">
+                        Accessories
+                    </a>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="col-lg-3">
+                    <h5>
+                        Contact
+                    </h5>
+                    <p>
+                        <i class="bi bi-instagram"></i>
+                        @loops.handmade
+                    </p>
+                    <p>
+                        <i class="bi bi-whatsapp"></i>
+                        +62 812-3456-7890
+                    </p>
+                    <p>
+                        <i class="bi bi-envelope"></i>
+                        loops@gmail.com
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <small>
+                    © 2026 LOOPS Handmade Store.
+                    Made with love ♡
+                </small>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </body>
+    <script src="script.js"></script>
 </html>

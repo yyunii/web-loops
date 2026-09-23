@@ -10,6 +10,8 @@
     --pink: #df9b9e;
     --pink-light: #f8dddd;
 
+    --muted-pink:#f7b8d1c7;
+
     --sage: #81966d;
     --sage-light: #e7eedf;
 
@@ -29,6 +31,10 @@
 
 .text-pink{
     color: var(--pink);
+}
+
+.text-muted{
+    color: var(--muted-pink);
 }
 
 
@@ -415,79 +421,6 @@ section {
     color: var(--pink);
 
     font-size: 22px;
-
-}
-
-
-/* ================================================= */
-/* REASON */
-/* ================================================= */
-
-.reason-card {
-
-    background: white;
-
-    border-radius: 22px;
-
-    padding: 30px 20px;
-
-    text-align: center;
-
-    height: 100%;
-
-    box-shadow: var(--shadow);
-
-    transition: 0.3s;
-
-}
-
-
-.reason-card:hover {
-
-    transform: translateY(-8px);
-
-}
-
-
-.reason-icon {
-
-    width: 65px;
-
-    height: 65px;
-
-    background: var(--pink-light);
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 29px;
-
-    margin: auto;
-
-}
-
-
-.reason-card h5 {
-
-    font-weight: 700;
-
-    margin-top: 18px;
-
-}
-
-
-.reason-card p {
-
-    font-size: 14px;
-
-    color: #777;
-
-    margin-bottom: 0;
 
 }
 
