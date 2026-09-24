@@ -6,7 +6,7 @@ let cart = [];
 
 
 /* ================================================= */
-/* FORMAT RUPIAH */
+/* FORMAT RUeAH */
 /* ================================================= */
 
 function formatRupiah(number) {
@@ -165,21 +165,8 @@ function displayCart() {
 
         container.innerHTML += `
 
-            <div class="cart-item">
+            <div class="cart-item d-flex">
 
-                <div
-                    class="cart-item-image"
-                    style="
-                    background:#f5e8d8;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:28px;
-                    ">
-
-                    🧶
-
-                </div>
 
 
                 <div>
@@ -195,7 +182,7 @@ function displayCart() {
                 </div>
 
 
-                <div class="quantity-control">
+                <div class="quantity-control mx-auto">
 
                     <button
                         onclick="decreaseQuantity(${index})">
