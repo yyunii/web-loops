@@ -136,15 +136,6 @@ function displayCart() {
                 <p>
                     Keranjang masih kosong.
                 </p>
-
-                <a
-                    href="#shop"
-                    class="btn btn-loop">
-
-                    Belanja Sekarang
-
-                </a>
-
             </div>
 
         `;
